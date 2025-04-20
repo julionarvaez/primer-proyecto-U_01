@@ -1,11 +1,159 @@
+<!-- index.html - Página de inicio -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FotoGalería - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>hola mundo</h1>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">FotoGalería</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Sobre Nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner principal -->
+        <section class="hero-section">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold">Explora nuestra colección de fotografías</h1>
+                        <p class="lead">Descubre imágenes impresionantes capturadas por fotógrafos talentosos de todo el mundo.</p>
+                        <a href="gallery.html" class="btn btn-primary btn-lg">Ver Galería</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="/api/placeholder/600/400" alt="Fotografía destacada" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destacados -->
+        <section class="featured-section bg-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Destacados</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="/api/placeholder/400/300" class="card-img-top" alt="Imagen destacada 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Naturaleza</h5>
+                                <p class="card-text">Paisajes impresionantes de montañas, bosques y cascadas.</p>
+                                <a href="gallery.html?category=naturaleza" class="btn btn-outline-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="/api/placeholder/400/300" class="card-img-top" alt="Imagen destacada 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Arquitectura</h5>
+                                <p class="card-text">Edificios y estructuras que muestran diseño y creatividad.</p>
+                                <a href="gallery.html?category=arquitectura" class="btn btn-outline-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="/api/placeholder/400/300" class="card-img-top" alt="Imagen destacada 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Retratos</h5>
+                                <p class="card-text">Fotografías de personas que cuentan historias únicas.</p>
+                                <a href="gallery.html?category=retratos" class="btn btn-outline-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorías -->
+        <section class="categories-section py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Categorías</h2>
+                <div class="row">
+                    <div class="col-6 col-md-3 mb-4">
+                        <div class="category-item text-center">
+                            <img src="/api/placeholder/200/200" class="rounded-circle mb-3" alt="Categoría Naturaleza">
+                            <h4>Naturaleza</h4>
+                            <a href="gallery.html?category=naturaleza" class="btn btn-sm btn-primary">Explorar</a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <div class="category-item text-center">
+                            <img src="/api/placeholder/200/200" class="rounded-circle mb-3" alt="Categoría Arquitectura">
+                            <h4>Arquitectura</h4>
+                            <a href="gallery.html?category=arquitectura" class="btn btn-sm btn-primary">Explorar</a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <div class="category-item text-center">
+                            <img src="/api/placeholder/200/200" class="rounded-circle mb-3" alt="Categoría Retratos">
+                            <h4>Retratos</h4>
+                            <a href="gallery.html?category=retratos" class="btn btn-sm btn-primary">Explorar</a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <div class="category-item text-center">
+                            <img src="/api/placeholder/200/200" class="rounded-circle mb-3" alt="Categoría Urbano">
+                            <h4>Urbano</h4>
+                            <a href="gallery.html?category=urbano" class="btn btn-sm btn-primary">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>FotoGalería</h5>
+                    <p>Una colección de fotografías impresionantes para inspirar y deleitar.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="gallery.html" class="text-white">Galería</a></li>
+                        <li><a href="about.html" class="text-white">Sobre Nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contacto</h5>
+                    <p>info@fotogaleria.com<br>Tel: +123 456 7890</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2025 FotoGalería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

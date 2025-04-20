@@ -1,0 +1,119 @@
+/* styles.css - Estilos para la galería de fotos (continuación) */
+
+/* Estilos para la página sobre nosotros */
+.team-card {
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Estilos para el formulario de contacto */
+.contact-section {
+    background-color: var(--light-color);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(63, 81, 181, 0.25);
+}
+
+.form-control.is-invalid {
+    border-color: var(--secondary-color);
+}
+
+/* Estilos para el pie de página */
+footer {
+    margin-top: auto;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Animaciones y transiciones */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 30px 0;
+    }
+    
+    .hero-section img {
+        margin-top: 20px;
+    }
+    
+    .category-item img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Estilos para mensajes de notificación */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 4px;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.notification.error {
+    background-color: var(--secondary-color);
+}
+
+/* Estilos para el zoom de imágenes */
+.zoom-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    display: none;
+}
+
+.zoom-container img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.zoom-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
